@@ -74,6 +74,10 @@ nav li.active {
     border-color: var(--accent);
 }
 
+/* Profile links (LinkedIn / GitHub unified label) */
+.profile-link { font-weight:600; text-decoration:none; color:var(--accent); }
+.profile-link:hover, .profile-link:focus { text-decoration:underline; }
+
 /* Main content container */
 main { max-width:900px; width:100%; margin:0 auto; padding:0 20px 40px; }
 
