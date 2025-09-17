@@ -171,6 +171,12 @@ body.dark ul.tags li { background:#22303d; border-color:#35506b; }
     border-radius: 4px;
 }
 
+/* Diagram gallery inside project details */
+.diagram-gallery { display:flex; flex-wrap:wrap; gap:15px; margin:10px 0; }
+.diagram-gallery figure { flex:1 1 260px; margin:0; background:var(--card); border:1px solid var(--border); padding:8px; border-radius:4px; }
+.diagram-gallery img { width:100%; height:auto; display:block; }
+.diagram-gallery figcaption { font-size:.65rem; text-transform:uppercase; letter-spacing:.5px; margin-top:4px; color:var(--muted); text-align:center; }
+
 /* Metrics counter */
 .metrics { display:flex; gap:25px; flex-wrap:wrap; margin-top:10px; }
 .metric { background:var(--bg); border:1px solid var(--border); padding:12px 16px; border-radius:6px; font-size:1.4rem; font-weight:600; min-width:140px; text-align:center; position:relative; }
