@@ -39,19 +39,6 @@ $(document).ready(function() {
         });
     });
 
-    // Modal functionality
-    $('.modal-button').on('click', function() {
-        $('#modal').fadeIn();
-    });
-    $('.close-button').on('click', function() {
-        $('#modal').fadeOut();
-    });
-    // Close modal when clicking outside the modal content
-    $('#modal').on('click', function(e) {
-        if ($(e.target).is('#modal')) {
-            $('#modal').fadeOut();
-        }
-    });
 
     // Tooltip creation on hover
     $('.project-image').hover(function(event) {
