@@ -106,35 +106,38 @@ $(document).ready(function() {
     function animateSkills(){
         var container = $('#about-section');
         if(!container.length) return;
-        // Reset previous animation
         container.find('.skill').each(function(){
             var skill = $(this);
             skill.removeClass('animated');
             var fill = skill.find('.fill');
             fill.stop(true).css('width','0');
-            fill.text('');
+            // Ensure pct span exists
+            var pct = skill.find('.pct');
+            if(!pct.length){
+                pct = $('<span class="pct" aria-hidden="true">0%</span>');
+                skill.append(pct);
+            } else {
+                pct.text('0%');
+            }
         });
-        // Staggered animation
         container.find('.skill').each(function(i){
             var skill = $(this);
             var level = skill.data('level');
             var fill = skill.find('.fill');
+            var pct = skill.find('.pct');
             skill.addClass('animated');
-            // Animate width over 1.2s with slight stagger
             setTimeout(function(){
-                var current = 0;
-                var duration = 1200; // ms
+                var duration = 1000;
                 var start = performance.now();
                 function step(ts){
                     var p = Math.min((ts - start)/duration, 1);
-                    var val = Math.floor(p * level);
+                    var val = Math.round(p * level);
                     fill.css('width', val + '%');
-                    fill.text(val + '%');
+                    pct.text(val + '%');
                     if(p < 1){ requestAnimationFrame(step); }
-                    else { fill.text(level + '%'); }
                 }
                 requestAnimationFrame(step);
-            }, i * 200);
+            }, i * 180);
         });
     }
 
