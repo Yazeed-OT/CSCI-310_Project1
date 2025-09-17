@@ -104,12 +104,37 @@ $(document).ready(function() {
     doReveal();
 
     function animateSkills(){
-        $('#about-section .skill').each(function(){
+        var container = $('#about-section');
+        if(!container.length) return;
+        // Reset previous animation
+        container.find('.skill').each(function(){
             var skill = $(this);
-            if(skill.hasClass('animated')) return;
+            skill.removeClass('animated');
+            var fill = skill.find('.fill');
+            fill.stop(true).css('width','0');
+            fill.text('');
+        });
+        // Staggered animation
+        container.find('.skill').each(function(i){
+            var skill = $(this);
             var level = skill.data('level');
+            var fill = skill.find('.fill');
             skill.addClass('animated');
-            skill.find('.fill').css('width', level + '%');
+            // Animate width over 1.2s with slight stagger
+            setTimeout(function(){
+                var current = 0;
+                var duration = 1200; // ms
+                var start = performance.now();
+                function step(ts){
+                    var p = Math.min((ts - start)/duration, 1);
+                    var val = Math.floor(p * level);
+                    fill.css('width', val + '%');
+                    fill.text(val + '%');
+                    if(p < 1){ requestAnimationFrame(step); }
+                    else { fill.text(level + '%'); }
+                }
+                requestAnimationFrame(step);
+            }, i * 200);
         });
     }
 
