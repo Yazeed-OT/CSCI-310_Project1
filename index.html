@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Yazeed Alotaibi | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Load jQuery from CDN -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -11,7 +11,7 @@
 <body>
     <!-- Header section -->
     <header>
-        <h1>My Personal Website</h1>
+        <h1>Yazeed Alotaibi</h1>
         <button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark Mode</button>
     </header>
 
@@ -20,9 +20,10 @@
         <ul>
             <!-- Each menu item has a data-target attribute that corresponds to a tab section -->
             <li class="menu-item active" data-target="home-section">Home</li>
-            <li class="menu-item" data-target="work-section">Work</li>
+            <li class="menu-item" data-target="work-section">Projects</li>
             <li class="menu-item" data-target="about-section">About</li>
             <li class="menu-item" data-target="hobbies-section">Hobbies</li>
+            <li class="menu-item" data-target="contact-section">Contact</li>
         </ul>
     </nav>
 
@@ -34,10 +35,12 @@
                 <h2 class="visually-hidden">Home</h2>
                 <div class="content">
                     <div class="image-block">
-                        <img src="assets/img/placeholder.png" alt="Profile or hero image placeholder">
+                        <img src="assets/img/placeholder.png" alt="Profile image illustration">
                     </div>
                     <div class="text-block">
-                        <p>Welcome! This site showcases my projects, background, and interests. Use the menu above to explore different sections. Replace this paragraph with a concise personal elevator pitch (e.g., what you study, your focus areas, and what you are looking for).</p>
+                        <p><strong>Motivated Computer Science student</strong> with comprehensive experience in backend development, database design, and web application engineering. Proficient in <strong>Python, Django, MySQL/SQLite, cloud computing</strong>, and object‑oriented design. Passionate about leveraging technology to solve real‑world problems and drive innovation. Expected B.S. graduation: <strong>May 2025</strong>.</p>
+                        <p>Explore my work, coursework, and interests. I am actively seeking internships or entry‑level opportunities in backend development, cloud engineering, or full‑stack roles.</p>
+                        <p><a href="https://www.linkedin.com/in/yazeed-ot/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Yazeed-OT" target="_blank" rel="noopener">GitHub</a></p>
                     </div>
                 </div>
             </div>
@@ -51,28 +54,66 @@
                     <label for="project-search" class="visually-hidden">Search Projects</label>
                     <input id="project-search" type="text" placeholder="Search projects..." aria-label="Search projects">
                 </div>
-                <!-- Project card 1 -->
-                <div class="project-card" tabindex="0">
-                    <h3>Project 1: <span class="project-sub">Sample Web App</span></h3>
-                    <img src="assets/img/placeholder.png" alt="Screenshot of sample web app" class="project-image">
-                    <p>A responsive web application demonstrating clean layout structure and basic interactive components.</p>
+                <!-- Chemistry Inventory System -->
+                <div class="project-card" tabindex="0" data-tags="django backend mysql qr security responsive">
+                    <h3>Chemistry Inventory System</h3>
+                    <img src="assets/img/placeholder.png" alt="Chemistry inventory system interface mock" class="project-image">
+                    <p>Full‑stack web application for University of Indianapolis Chemistry Department to manage chemical stock efficiently.</p>
                     <button class="details-button" aria-expanded="false">View Details</button>
                     <div class="details" aria-hidden="true">
-                        <p>Technologies: HTML, CSS, JavaScript. Features slide toggle effect for this panel.</p>
+                        <ul class="compact">
+                            <li>Designed scalable relational schema (Django ORM + MySQL) for fast retrieval.</li>
+                            <li>Integrated QR code scanning for seamless inventory updates, reducing manual errors.</li>
+                            <li>Implemented search & filter by name, location, and ID; reduced management time by <strong>30%</strong>.</li>
+                            <li>Ensured mobile responsiveness & secure HTTPS interactions.</li>
+                        </ul>
+                        <p><strong>Stack:</strong> Django, Python, MySQL, QR‑Scanner Library, HTML/CSS.</p>
                     </div>
                 </div>
-                <!-- Project card 2 -->
-                <div class="project-card" tabindex="0">
-                    <h3>Project 2: <span class="project-sub">Data Visualization</span></h3>
-                    <img src="assets/img/placeholder.png" alt="Chart placeholder" class="project-image">
-                    <p>Interactive visualization exploring dataset trends. Hover the image to see a tooltip.</p>
+                <!-- Python Web Scraper -->
+                <div class="project-card" tabindex="0" data-tags="python scraping multithreading cad 3d">
+                    <h3>Python Web Scraper & CAD Pipeline</h3>
+                    <img src="assets/img/placeholder.png" alt="Data scraping process visualization" class="project-image">
+                    <p>Automated data collection with multithreading, integrating CAD software + 3D printing for data utilization.</p>
+                    <button class="details-button" aria-expanded="false">View Details</button>
+                    <div class="details" aria-hidden="true">
+                        <ul class="compact">
+                            <li>Increased data collection efficiency by <strong>50%</strong> using concurrent requests.</li>
+                            <li>Processed raw data into printable 3D artifacts for analysis.</li>
+                            <li>Robust error handling & retry logic for stability.</li>
+                        </ul>
+                        <p><strong>Stack:</strong> Python, Multithreading, CAD, 3D Printing.</p>
+                    </div>
                 </div>
-                <!-- Project card 3 -->
-                <div class="project-card" tabindex="0">
-                    <h3>Project 3: <span class="project-sub">Modal Demo</span></h3>
-                    <img src="assets/img/placeholder.png" alt="Modal demo placeholder" class="project-image">
-                    <p>Shows a modal with more information. Click the button below.</p>
+                <!-- Modal Demo (retain for effect) -->
+                <div class="project-card" tabindex="0" data-tags="javascript ui modal animation">
+                    <h3>Interactive Modal Demo</h3>
+                    <img src="assets/img/placeholder.png" alt="Modal demo thumbnail" class="project-image">
+                    <p>Demonstrates accessible modal component & image animation effects.</p>
                     <button class="modal-button">Open Modal</button>
+                </div>
+                <!-- Placeholder extra effects examples -->
+                <div class="project-card" tabindex="0" data-tags="animation metrics counters">
+                    <h3>Performance Metrics Counter</h3>
+                    <img src="assets/img/placeholder.png" alt="Animated metrics counters" class="project-image">
+                    <p>Count‑up animation displays impact statistics when revealed (e.g., 30% time reduction).</p>
+                    <div class="details auto-show" aria-hidden="true">
+                        <div class="metrics">
+                            <div class="metric" data-target="30">0<span class="unit">%</span><div class="label">Time Reduced</div></div>
+                            <div class="metric" data-target="50">0<span class="unit">%</span><div class="label">Efficiency Gain</div></div>
+                            <div class="metric" data-target="2025">0<div class="label">Grad Year</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" tabindex="0" data-tags="flipcard css3 animation">
+                    <h3>CSS Flip Card Effect</h3>
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">Hover to Flip</div>
+                            <div class="flip-back">Revealed Content</div>
+                        </div>
+                    </div>
+                    <p>Pure CSS 3D flip demonstrating transform & perspective for UI microinteraction.</p>
                 </div>
             </div>
         </section>
@@ -83,25 +124,48 @@
                 <h2>About Me</h2>
                 <div class="content">
                     <div class="image-block">
-                        <img src="assets/img/placeholder.png" alt="Profile headshot placeholder">
+                        <img src="assets/img/placeholder.png" alt="Profile headshot illustration">
                     </div>
                     <div class="text-block">
-                        <p><strong>Professional Summary:</strong> Replace this section with a short paragraph summarizing who you are (e.g., Computer Science student / aspiring software engineer focused on front-end development and user‑centric design).</p>
-                        <h3>Experience</h3>
+                        <p><strong>Professional Summary:</strong> Motivated and detail‑oriented Computer Science student with experience in backend development, database design, and web application engineering. Passionate about leveraging technology for real‑world impact and innovation.</p>
+                        <h3>Education</h3>
                         <ul class="compact">
-                            <li><strong>[Role Title]</strong> – [Organization], [Dates] – Brief bullet of impact or responsibility.</li>
-                            <li><strong>[Role Title]</strong> – [Organization], [Dates] – Another concise accomplishment.</li>
+                            <li><strong>University of Indianapolis</strong>, B.S. Computer Science (Expected May 2025). Relevant Coursework: Data Structures, Programming Languages, Network Security, Advanced Programming, Cloud Computing, Computer Architecture, Parallel Computing.</li>
+                            <li><strong>IUPUI</strong> (Transfer: Aug 2020 – Jan 2023). Coursework: Circuit Design 1&2, Signals & Systems, Programming Languages.</li>
+                        </ul>
+                        <h3>Projects (Highlights)</h3>
+                        <ul class="compact">
+                            <li><strong>Chemistry Inventory System:</strong> Django + MySQL; QR code updates, search/filter, secure HTTPS; cut manual time 30%.</li>
+                            <li><strong>Python Web Scraper:</strong> Multithreaded collection; CAD & 3D printing integration; boosted efficiency 50%.</li>
                         </ul>
                         <h3>Skills</h3>
                         <ul class="tags" aria-label="Skill list">
-                            <li>HTML5</li>
-                            <li>CSS3 / Flexbox</li>
-                            <li>JavaScript (ES6)</li>
-                            <li>jQuery</li>
-                            <li>Responsive Design</li>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>MySQL / SQLite</li>
+                            <li>JavaScript</li>
+                            <li>C / C++</li>
+                            <li>Cloud (AWS)</li>
+                            <li>Network Security</li>
                             <li>Git / GitHub</li>
+                            <li>QR Scanning</li>
+                            <li>Object‑Oriented Design</li>
                         </ul>
-                        <p class="note">Customize the above with your actual roles, achievements, and stack.</p>
+                        <div class="skill-bars" id="skill-bars" aria-label="Skill proficiency indicators">
+                            <div class="skill" data-level="90"><span class="label">Python</span><div class="bar"><div class="fill"></div></div></div>
+                            <div class="skill" data-level="85"><span class="label">Django</span><div class="bar"><div class="fill"></div></div></div>
+                            <div class="skill" data-level="80"><span class="label">MySQL</span><div class="bar"><div class="fill"></div></div></div>
+                            <div class="skill" data-level="75"><span class="label">JavaScript</span><div class="bar"><div class="fill"></div></div></div>
+                            <div class="skill" data-level="70"><span class="label">AWS</span><div class="bar"><div class="fill"></div></div></div>
+                        </div>
+                        <h3>Awards</h3>
+                        <ul class="compact">
+                            <li><strong>Dean's List</strong>, Spring 2023 (Academic excellence and high GPA).</li>
+                            <li><strong>Hackathon Participant</strong>, Coding for Social Good 2022 – Sustainability solution via programming.</li>
+                            <li><strong>Top Tutor Recognition</strong>, 2022 – Outstanding performance in tutoring CS students.</li>
+                            <li><strong>Saudi Arabian Cultural Mission Scholarship</strong> – Full academic scholarship recognizing excellence.</li>
+                        </ul>
+                        <p class="note">Download full resume (PDF) coming soon.</p>
                     </div>
                 </div>
             </div>
@@ -113,16 +177,44 @@
                 <h2>Interests & Hobbies</h2>
                 <div class="content column">
                     <div class="image-block">
-                        <img src="assets/img/placeholder.png" alt="Representative hobby image placeholder">
+                        <img src="assets/img/placeholder.png" alt="Soccer and swimming illustration">
                     </div>
                     <div class="text-block">
-                        <p>Describe what you enjoy outside of professional or academic work. Suggested structure:</p>
+                        <p>Outside of coding and coursework, I stay active and balanced through sports and continuous learning.</p>
                         <ul class="compact">
-                            <li><strong>Hobby / Activity 1:</strong> One sentence explaining why it matters to you.</li>
-                            <li><strong>Hobby / Activity 2:</strong> A highlight or achievement (event, club, team, etc.).</li>
-                            <li><strong>Community / Volunteering:</strong> Optional description of involvement.</li>
+                            <li><strong>Soccer:</strong> Enjoy playing competitively and recreationally—improves teamwork, strategy, and endurance.</li>
+                            <li><strong>Swimming:</strong> A go‑to for fitness and focus; helps build discipline and resilience.</li>
+                            <li><strong>Technology Exploration:</strong> Experimenting with cloud services, automation scripts, and backend prototypes.</li>
+                            <li><strong>Community & Mentoring:</strong> Recognized as a top tutor—love helping peers grasp CS fundamentals.</li>
                         </ul>
-                        <p>Add a second image, gallery, or list if desired for variety.</p>
+                        <p>Sports keep me physically engaged while personal tech projects sharpen my creativity and problem‑solving.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact tab content -->
+        <section id="contact-section" class="tab-content" aria-labelledby="contact-tab">
+            <div class="section-inner">
+                <h2>Get in Touch</h2>
+                <div class="content">
+                    <div class="image-block">
+                        <img src="assets/img/placeholder.png" alt="Contact / communication illustration">
+                    </div>
+                    <div class="text-block">
+                        <p>Feel free to reach out regarding collaboration, internship opportunities, or project ideas.</p>
+                        <ul class="compact">
+                            <li><strong>Email:</strong> <a href="mailto:yazesst@gmail.com">yazesst@gmail.com</a></li>
+                            <li><strong>Location:</strong> Indianapolis, IN</li>
+                            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yazeed-ot/" target="_blank" rel="noopener">linkedin.com/in/yazeed-ot</a></li>
+                            <li><strong>GitHub:</strong> <a href="https://github.com/Yazeed-OT" target="_blank" rel="noopener">github.com/Yazeed-OT</a></li>
+                        </ul>
+                        <form id="contact-form" novalidate>
+                            <label>Name <input type="text" id="cf-name" required></label>
+                            <label>Email <input type="email" id="cf-email" required></label>
+                            <label>Message <textarea id="cf-msg" rows="4" required></textarea></label>
+                            <button type="submit">Send (Demo)</button>
+                            <div id="form-status" class="note" aria-live="polite"></div>
+                        </form>
                     </div>
                 </div>
             </div>

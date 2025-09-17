@@ -20,6 +20,9 @@ $(document).ready(function() {
                 $(this).delay(200 * idx).fadeIn(500);
             });
         }
+        if (target === 'about-section') {
+            animateSkills();
+        }
     });
 
     // Hide project cards initially
@@ -107,9 +110,63 @@ $(document).ready(function() {
             var rect = this.getBoundingClientRect();
             if(rect.top < window.innerHeight - 60){
                 $(this).addClass('visible');
+                // Trigger metrics count-up once visible
+                if($(this).find('.metrics').length && !$(this).data('counted')) {
+                    $(this).data('counted', true);
+                    $(this).find('.metric').each(function(){
+                        var el = $(this);
+                        var target = parseInt(el.data('target'), 10);
+                        if(isNaN(target)) return;
+                        var current = 0;
+                        var step = Math.max(1, Math.round(target / 60));
+                        var interval = setInterval(function(){
+                            current += step;
+                            if(current >= target){ current = target; clearInterval(interval); }
+                            el.contents().first()[0].textContent = current + (el.find('.unit').length ? '' : '');
+                        }, 16);
+                    });
+                }
             }
         });
     }
     $(window).on('scroll', doReveal);
     doReveal();
+
+    function animateSkills(){
+        $('#about-section .skill').each(function(){
+            var skill = $(this);
+            if(skill.hasClass('animated')) return;
+            var level = skill.data('level');
+            skill.addClass('animated');
+            skill.find('.fill').css('width', level + '%');
+        });
+    }
+
+    // If user loads directly into about section (future deep link)
+    if($('#about-section').hasClass('active')) animateSkills();
+
+    // Auto-open details panels marked auto-show after first reveal
+    $('.details.auto-show').each(function(){
+        var panel = $(this);
+        panel.parent().addClass('auto-details');
+    });
+
+    // Simple contact form demo validation
+    $('#contact-form').on('submit', function(e){
+        e.preventDefault();
+        var name = $('#cf-name').val().trim();
+        var email = $('#cf-email').val().trim();
+        var msg = $('#cf-msg').val().trim();
+        var status = $('#form-status');
+        if(!name || !email || !msg){
+            status.text('Please fill in all fields.');
+            return;
+        }
+        // Fake async submit
+        status.text('Sending...');
+        setTimeout(function(){
+            status.text('Message sent (demo only). Thank you!');
+            $('#contact-form')[0].reset();
+        }, 700);
+    });
 });
