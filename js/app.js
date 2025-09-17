@@ -110,22 +110,6 @@ $(document).ready(function() {
             var rect = this.getBoundingClientRect();
             if(rect.top < window.innerHeight - 60){
                 $(this).addClass('visible');
-                // Trigger metrics count-up once visible
-                if($(this).find('.metrics').length && !$(this).data('counted')) {
-                    $(this).data('counted', true);
-                    $(this).find('.metric').each(function(){
-                        var el = $(this);
-                        var target = parseInt(el.data('target'), 10);
-                        if(isNaN(target)) return;
-                        var current = 0;
-                        var step = Math.max(1, Math.round(target / 60));
-                        var interval = setInterval(function(){
-                            current += step;
-                            if(current >= target){ current = target; clearInterval(interval); }
-                            el.contents().first()[0].textContent = current + (el.find('.unit').length ? '' : '');
-                        }, 16);
-                    });
-                }
             }
         });
     }
