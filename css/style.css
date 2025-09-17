@@ -248,3 +248,10 @@ body.dark .theme-toggle { border-color:#555; }
 @media (max-width:480px){
     .theme-toggle { top:10px; right:10px; }
 }
+
+/* Typewriter effect */
+.typewriter { font-size:0.95rem; line-height:1.5; min-height:140px; position:relative; white-space:pre-wrap; }
+.typewriter.caret::after { content:""; display:inline-block; width:8px; height:1em; background:var(--accent); margin-left:2px; animation:blink 1s steps(1,end) infinite; vertical-align:bottom; }
+@keyframes blink { 50% { opacity:0; } }
+.hidden { display:none !important; }
+.typewriter .highlight { font-weight:600; }

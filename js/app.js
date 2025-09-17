@@ -151,4 +151,32 @@ $(document).ready(function() {
             $('#top h1').attr('tabindex','-1').focus();
         }, 400);
     });
+
+    // Typewriter effect for intro text
+    (function(){
+        var el = $('#intro-typer');
+        if(!el.length) return; // safety
+        if(el.data('typed')) return; // prevent double typing if tab switches
+        el.data('typed', true);
+        var full = el.data('text');
+        var idx = 0;
+        el.addClass('caret');
+        function typeNext(){
+            if(idx <= full.length){
+                el.text(full.substring(0, idx));
+                idx++;
+                setTimeout(typeNext, idx < 30 ? 40 : 18); // accelerate after first chars
+            } else {
+                el.removeClass('caret');
+                // Highlight key tech words after completion
+                var html = el.html()
+                    .replace(/Python/g,'<span class="highlight">Python</span>')
+                    .replace(/Django/g,'<span class="highlight">Django</span>')
+                    .replace(/cloud computing/g,'<span class="highlight">cloud computing</span>');
+                el.html(html);
+                $('#intro-follow').removeClass('hidden').hide().fadeIn(600);
+            }
+        }
+        setTimeout(typeNext, 400); // slight delay for nicer feel
+    })();
 });
