@@ -9,131 +9,138 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-    <!-- Header section -->
-    <header>
-    <h1>Yazeed Alotaibi</h1>
-        <button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark Mode</button>
-    </header>
+    <div class="page">
+        <!-- Header section -->
+        <header class="site-header">
+            <h1>Yazeed Alotaibi</h1>
+            <button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark Mode</button>
+        </header>
 
-    <!-- Navigation menu -->
-    <nav>
-        <ul>
-            <!-- Each menu item has a data-target attribute that corresponds to a tab section -->
-            <li class="menu-item active" data-target="home-section">Home</li>
-            <li class="menu-item" data-target="work-section">Projects</li>
-            <li class="menu-item" data-target="about-section">About</li>
-            <li class="menu-item" data-target="hobbies-section">Hobbies</li>
-            <li class="menu-item" data-target="contact-section">Contact</li>
-        </ul>
-    </nav>
+        <!-- Navigation menu -->
+        <nav class="site-menu" aria-label="Primary">
+            <ul>
+                <li class="menu-item active" data-target="home-section">Home</li>
+                <li class="menu-item" data-target="work-section">Projects</li>
+                <li class="menu-item" data-target="about-section">About</li>
+                <li class="menu-item" data-target="hobbies-section">Hobbies</li>
+                <li class="menu-item" data-target="contact-section">Contact</li>
+            </ul>
+        </nav>
 
-    <!-- Main content area -->
-    <main>
+        <!-- Main content area -->
+        <main class="site-main">
         <!-- Home tab content -->
-        <section id="home-section" class="tab-content active" aria-labelledby="home-tab">
-            <div class="section-inner">
-                <h2 class="visually-hidden">Home</h2>
-                <div class="content">
-                    <div class="image-block">
-                        <img class="avatar-img" src="assets/img/avatar.svg" alt="Avatar illustration">
+                <section id="home-section" class="tab-content active" aria-labelledby="home-tab">
+                    <div class="section-inner">
+                        <h2 class="visually-hidden">Home</h2>
+                        <div class="main">
+                            <div class="left-rail">
+                                <div class="image-block">
+                                    <img class="avatar-img" src="assets/img/avatar.svg" alt="Avatar illustration">
+                                </div>
+                                <div class="small-texts">
+                                    <p class="profile-links">
+                                        <a class="profile-link" href="https://www.linkedin.com/in/yazeed-ot/" target="_blank" rel="noopener" title="LinkedIn Profile"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11.02 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9.5 9h3.8v1.71h.05c.53-.95 1.84-1.95 3.79-1.95 4.05 0 4.8 2.34 4.8 5.38V21h-4v-5.5c0-1.31-.02-3-1.84-3-1.84 0-2.12 1.43-2.12 2.9V21h-4z"/></svg></span>Yazeed-OT</a>
+                                         ·
+                                        <a class="profile-link" href="https://github.com/Yazeed-OT" target="_blank" rel="noopener" title="GitHub Profile"><span class="icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></span>Yazeed-OT</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="right-rail">
+                                <p><strong>Motivated and detail‑oriented Computer Science student</strong> with comprehensive experience in backend development, database design, and web application engineering. Proficient in <strong>Python, Django, and cloud computing</strong> with a strong foundation in object‑oriented programming. Passionate about leveraging technology to solve real‑world problems and drive innovation. Expected B.S. graduation: <strong>May 2025</strong>.</p>
+                                <p>Explore my work, coursework, and interests I'm pursuing internship or entry‑level opportunities in backend, cloud, or full‑stack development.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-block">
-                        <p><strong>Motivated and detail‑oriented Computer Science student</strong> with comprehensive experience in backend development, database design, and web application engineering. Proficient in <strong>Python, Django, and cloud computing</strong> with a strong foundation in object‑oriented programming. Passionate about leveraging technology to solve real‑world problems and drive innovation. Expected B.S. graduation: <strong>May 2025</strong>.</p>
-                        <p>Explore my work, coursework, and interests I'm pursuing internship or entry‑level opportunities in backend, cloud, or full‑stack development.</p>
-                        <p class="profile-links">
-                            <a class="profile-link" href="https://www.linkedin.com/in/yazeed-ot/" target="_blank" rel="noopener" title="LinkedIn Profile">
-                                <span class="icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11.02 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9.5 9h3.8v1.71h.05c.53-.95 1.84-1.95 3.79-1.95 4.05 0 4.8 2.34 4.8 5.38V21h-4v-5.5c0-1.31-.02-3-1.84-3-1.84 0-2.12 1.43-2.12 2.9V21h-4z"/></svg>
-                                </span>
-                                Yazeed-OT
-                            </a>
-                             ·
-                            <a class="profile-link" href="https://github.com/Yazeed-OT" target="_blank" rel="noopener" title="GitHub Profile">
-                                <span class="icon" aria-hidden="true">
-                                    <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                                </span>
-                                Yazeed-OT
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
         <!-- Work/Projects tab content -->
-        <section id="work-section" class="tab-content" aria-labelledby="work-tab">
-            <div class="section-inner">
-                <h2>Projects & Work</h2>
-                <div class="project-filter">
-                    <label for="project-search" class="visually-hidden">Search Projects</label>
-                    <input id="project-search" type="text" placeholder="Search projects..." aria-label="Search projects">
-                </div>
-                <!-- Chemistry Inventory System -->
-                <div class="project-card" tabindex="0" data-tags="django backend mysql qr security responsive">
-                    <h3>Chemistry Inventory System</h3>
-                    <img src="assets/img/chemistry_inventory.svg" alt="Stylized shelves of chemical bottles with barcode representing inventory system" class="project-image">
-                    <p>Full‑stack web application for University of Indianapolis Chemistry Department to manage chemical stock efficiently.</p>
-                    <button class="details-button" aria-expanded="false">View Details</button>
-                    <div class="details" aria-hidden="true">
-                        <ul class="compact">
-                            <li>Designed scalable relational schema (Django ORM + MySQL) for fast retrieval.</li>
-                            <li>Integrated QR code scanning for seamless inventory updates, reducing manual errors.</li>
-                            <li>Implemented search & filter by name, location, and ID; reduced management time by <strong>30%</strong>.</li>
-                            <li>Ensured mobile responsiveness & secure HTTPS interactions.</li>
-                        </ul>
-                        <p><strong>Stack:</strong> Django, Python, MySQL, QR‑Scanner Library, HTML/CSS.</p>
-                    </div>
-                </div>
-                <!-- Banking System Project -->
-                <div class="project-card" tabindex="0" data-tags="c cpp banking system oop makefile fileio">
-                    <h3>Banking System Project</h3>
-                    <img src="assets/img/banking_system.svg" alt="Stylized terminal menu showing banking system CLI options" class="project-image">
-                    <p>Menu‑driven C/C++ banking application supporting account management, transactions, and persistent data storage via flat files.</p>
-                    <button class="details-button" aria-expanded="false">View Details</button>
-                    <div class="details" aria-hidden="true">
-                        <ul class="compact">
-                            <li>Implements core operations: create account, deposit, withdraw, balance inquiry, and secure record update.</li>
-                            <li>Uses structured file I/O (<code>bank_data.txt</code>) for persistent storage with simple indexing.</li>
-                            <li>Organized with modular headers/source files plus a <code>Makefile</code> for streamlined compilation.</li>
-                            <li>Includes system & UML diagrams to document architecture and object relationships.</li>
-                            <li>Demonstrates object‑oriented design principles (encapsulation & separation of concerns).</li>
-                        </ul>
-                        <p><strong>Stack:</strong> C/C++, Makefile, File I/O, OOP design.</p>
-                        <div class="diagram-gallery">
-                            <figure>
-                                <img src="https://raw.githubusercontent.com/Yazeed-OT/module8_final_project/master/uml_class_diagram.png" alt="UML class diagram for Banking System showing Bank, Customer, Account hierarchy and Transaction relationships">
-                                <figcaption>UML Class Diagram</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="https://raw.githubusercontent.com/Yazeed-OT/module8_final_project/master/system_structure_diagram.png" alt="System structure diagram showing high level banking entities and interactions between Customer, Accounts, and Services">
-                                <figcaption>System Structure Diagram</figcaption>
-                            </figure>
+                <section id="work-section" class="tab-content" aria-labelledby="work-tab">
+                    <div class="section-inner">
+                        <h2>Projects & Work</h2>
+                        <div class="main">
+                            <div class="left-rail">
+                                <div class="image-block placeholder-img">
+                                    <img class="avatar-img" src="assets/img/avatar.svg" alt="Avatar placeholder for project navigation">
+                                </div>
+                                <div class="small-texts"><p class="note">Use search to filter projects.</p></div>
+                            </div>
+                            <div class="right-rail">
+                                <div class="project-filter">
+                                    <label for="project-search" class="visually-hidden">Search Projects</label>
+                                    <input id="project-search" type="text" placeholder="Search projects..." aria-label="Search projects">
+                                </div>
+                                <!-- Chemistry Inventory System -->
+                                <div class="project-card" tabindex="0" data-tags="django backend mysql qr security responsive">
+                                    <h3>Chemistry Inventory System</h3>
+                                    <img src="assets/img/chemistry_inventory.svg" alt="Stylized shelves of chemical bottles with barcode representing inventory system" class="project-image">
+                                    <p>Full‑stack web application for University of Indianapolis Chemistry Department to manage chemical stock efficiently.</p>
+                                    <button class="details-button" aria-expanded="false">View Details</button>
+                                    <div class="details" aria-hidden="true">
+                                        <ul class="compact">
+                                            <li>Designed scalable relational schema (Django ORM + MySQL) for fast retrieval.</li>
+                                            <li>Integrated QR code scanning for seamless inventory updates, reducing manual errors.</li>
+                                            <li>Implemented search & filter by name, location, and ID; reduced management time by <strong>30%</strong>.</li>
+                                            <li>Ensured mobile responsiveness & secure HTTPS interactions.</li>
+                                        </ul>
+                                        <p><strong>Stack:</strong> Django, Python, MySQL, QR‑Scanner Library, HTML/CSS.</p>
+                                    </div>
+                                </div>
+                                <!-- Banking System Project -->
+                                <div class="project-card" tabindex="0" data-tags="c cpp banking system oop makefile fileio">
+                                    <h3>Banking System Project</h3>
+                                    <img src="assets/img/banking_system.svg" alt="Stylized terminal menu showing banking system CLI options" class="project-image">
+                                    <p>Menu‑driven C/C++ banking application supporting account management, transactions, and persistent data storage via flat files.</p>
+                                    <button class="details-button" aria-expanded="false">View Details</button>
+                                    <div class="details" aria-hidden="true">
+                                        <ul class="compact">
+                                            <li>Implements core operations: create account, deposit, withdraw, balance inquiry, and secure record update.</li>
+                                            <li>Uses structured file I/O (<code>bank_data.txt</code>) for persistent storage with simple indexing.</li>
+                                            <li>Organized with modular headers/source files plus a <code>Makefile</code> for streamlined compilation.</li>
+                                            <li>Includes system & UML diagrams to document architecture and object relationships.</li>
+                                            <li>Demonstrates object‑oriented design principles (encapsulation & separation of concerns).</li>
+                                        </ul>
+                                        <p><strong>Stack:</strong> C/C++, Makefile, File I/O, OOP design.</p>
+                                        <div class="diagram-gallery">
+                                            <figure>
+                                                <img src="https://raw.githubusercontent.com/Yazeed-OT/module8_final_project/master/uml_class_diagram.png" alt="UML class diagram for Banking System showing Bank, Customer, Account hierarchy and Transaction relationships">
+                                                <figcaption>UML Class Diagram</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="https://raw.githubusercontent.com/Yazeed-OT/module8_final_project/master/system_structure_diagram.png" alt="System structure diagram showing high level banking entities and interactions between Customer, Accounts, and Services">
+                                                <figcaption>System Structure Diagram</figcaption>
+                                            </figure>
+                                        </div>
+                                        <p><a href="https://github.com/Yazeed-OT/module8_final_project" target="_blank" rel="noopener">Repository Link</a></p>
+                                    </div>
+                                </div>
+                                <div class="project-card" tabindex="0" data-tags="flipcard css3 animation">
+                                    <h3>CSS Flip Card Effect</h3>
+                                    <div class="flip-card">
+                                        <div class="flip-inner">
+                                            <div class="flip-front">Hover to Flip</div>
+                                            <div class="flip-back">Revealed Content</div>
+                                        </div>
+                                    </div>
+                                    <p>Pure CSS 3D flip demonstrating transform & perspective for UI microinteraction.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p><a href="https://github.com/Yazeed-OT/module8_final_project" target="_blank" rel="noopener">Repository Link</a></p>
                     </div>
-                </div>
-                <div class="project-card" tabindex="0" data-tags="flipcard css3 animation">
-                    <h3>CSS Flip Card Effect</h3>
-                    <div class="flip-card">
-                        <div class="flip-inner">
-                            <div class="flip-front">Hover to Flip</div>
-                            <div class="flip-back">Revealed Content</div>
-                        </div>
-                    </div>
-                    <p>Pure CSS 3D flip demonstrating transform & perspective for UI microinteraction.</p>
-                </div>
-            </div>
-        </section>
+                </section>
 
         <!-- About tab content -->
-        <section id="about-section" class="tab-content" aria-labelledby="about-tab">
-            <div class="section-inner">
-                <h2>About Me</h2>
-                <div class="content">
-                    <div class="image-block">
-                        <img class="avatar-img" src="assets/img/avatar.svg" alt="Profile headshot illustration">
-                    </div>
-                    <div class="text-block">
+                <section id="about-section" class="tab-content" aria-labelledby="about-tab">
+                    <div class="section-inner">
+                        <h2>About Me</h2>
+                        <div class="main">
+                            <div class="left-rail">
+                                <div class="image-block">
+                                    <img class="avatar-img" src="assets/img/avatar.svg" alt="Profile headshot illustration">
+                                </div>
+                                <div class="small-texts"><p class="note">Core skills & education overview.</p></div>
+                            </div>
+                            <div class="right-rail">
                         <p><strong>Professional Summary:</strong> Motivated and detail‑oriented Computer Science student with comprehensive experience in backend development, database design, and web application engineering. Proficient in Python, Django, and cloud computing with a strong foundation in object‑oriented programming. Passionate about leveraging technology to solve real‑world problems and drive innovation.</p>
                         <h3>Education</h3>
                         <ul class="compact">
@@ -170,40 +177,46 @@
                             <li><strong>Dean's List</strong>, IUPUI (Academic excellence and high GPA).</li>
                             <li><strong>Saudi Arabian Cultural Mission Scholarship</strong> – Full academic scholarship recognizing excellence.</li>
                         </ul>
-                        <p class="note">Download full resume (PDF): <a href="assets/resume/Yazeed_Althyabi_Resume.pdf" download>Yazeed_Althyabi_Resume.pdf</a> (place the file in <code>assets/resume/</code>).</p>
+                                                <p class="note">Download full resume (PDF): <a href="assets/resume/Yazeed_Althyabi_Resume.pdf" download>Yazeed_Althyabi_Resume.pdf</a> (place the file in <code>assets/resume/</code>).</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
         <!-- Hobbies tab content -->
-        <section id="hobbies-section" class="tab-content" aria-labelledby="hobbies-tab">
-            <div class="section-inner">
-                <h2>Interests & Hobbies</h2>
-                <div class="content column">
-                    <div class="image-block">
-                        <img class="avatar-img" src="assets/img/avatar.svg" alt="Athletic and learning interests illustration">
-                    </div>
-                    <div class="text-block">
+                <section id="hobbies-section" class="tab-content" aria-labelledby="hobbies-tab">
+                    <div class="section-inner">
+                        <h2>Interests & Hobbies</h2>
+                        <div class="main">
+                            <div class="left-rail">
+                                <div class="image-block">
+                                    <img class="avatar-img" src="assets/img/avatar.svg" alt="Athletic and learning interests illustration">
+                                </div>
+                                <div class="small-texts"><p class="note">Balance through sport & learning.</p></div>
+                            </div>
+                            <div class="right-rail">
                         <p>Outside of coding and coursework, I stay active and balanced through sports and continuous learning.</p>
                         <ul class="compact">
                             <li><strong>Soccer:</strong> Enjoy playing competitively and recreationally improves teamwork, strategy, and endurance.</li>
                             <li><strong>Swimming:</strong> A go‑to for fitness and focus; helps build discipline and resilience.</li>
                             <li><strong>Technology Exploration:</strong> Experimenting with cloud services, automation scripts, and backend prototypes.</li>                        </ul>
                         <p>Sports keep me physically engaged while personal tech projects sharpen my creativity and problem‑solving.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
         <!-- Contact tab content -->
-        <section id="contact-section" class="tab-content" aria-labelledby="contact-tab">
-            <div class="section-inner">
-                <h2>Get in Touch</h2>
-                <div class="content">
-                    <div class="image-block">
-                        <img class="avatar-img" src="assets/img/avatar.svg" alt="Contact / communication illustration">
-                    </div>
-                    <div class="text-block">
+                <section id="contact-section" class="tab-content" aria-labelledby="contact-tab">
+                    <div class="section-inner">
+                        <h2>Get in Touch</h2>
+                        <div class="main">
+                            <div class="left-rail">
+                                <div class="image-block">
+                                    <img class="avatar-img" src="assets/img/avatar.svg" alt="Contact / communication illustration">
+                                </div>
+                                <div class="small-texts"><p class="note">Reach out anytime.</p></div>
+                            </div>
+                            <div class="right-rail">
                         <p>Feel free to reach out regarding collaboration, internship opportunities, or project ideas.</p>
                         <ul class="compact">
                             <li><strong>Email:</strong> <a href="mailto:yazcsai@gmail.com">yazcsai@gmail.com</a></li>
@@ -218,11 +231,12 @@
                             <button type="submit">Send (Demo)</button>
                             <div id="form-status" class="note" aria-live="polite"></div>
                         </form>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-    </main>
+                </section>
+        </main>
+    </div>
 
     <!-- External JavaScript file -->
     <script src="js/app.js"></script>
