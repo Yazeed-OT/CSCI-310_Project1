@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Load jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>My Personal Website</h1>
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark Mode</button>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+            <!-- Each menu item has a data-target attribute that corresponds to a tab section -->
+            <li class="menu-item active" data-target="home-section">Home</li>
+            <li class="menu-item" data-target="work-section">Work</li>
+            <li class="menu-item" data-target="about-section">About</li>
+            <li class="menu-item" data-target="hobbies-section">Hobbies</li>
+        </ul>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Home tab content -->
+        <section id="home-section" class="tab-content active" aria-labelledby="home-tab">
+            <div class="section-inner">
+                <h2 class="visually-hidden">Home</h2>
+                <div class="content">
+                    <div class="image-block">
+                        <img src="assets/img/placeholder.png" alt="Profile or hero image placeholder">
+                    </div>
+                    <div class="text-block">
+                        <p>Welcome! This site showcases my projects, background, and interests. Use the menu above to explore different sections. Replace this paragraph with a concise personal elevator pitch (e.g., what you study, your focus areas, and what you are looking for).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work/Projects tab content -->
+        <section id="work-section" class="tab-content" aria-labelledby="work-tab">
+            <div class="section-inner">
+                <h2>Projects & Work</h2>
+                <div class="project-filter">
+                    <label for="project-search" class="visually-hidden">Search Projects</label>
+                    <input id="project-search" type="text" placeholder="Search projects..." aria-label="Search projects">
+                </div>
+                <!-- Project card 1 -->
+                <div class="project-card" tabindex="0">
+                    <h3>Project 1: <span class="project-sub">Sample Web App</span></h3>
+                    <img src="assets/img/placeholder.png" alt="Screenshot of sample web app" class="project-image">
+                    <p>A responsive web application demonstrating clean layout structure and basic interactive components.</p>
+                    <button class="details-button" aria-expanded="false">View Details</button>
+                    <div class="details" aria-hidden="true">
+                        <p>Technologies: HTML, CSS, JavaScript. Features slide toggle effect for this panel.</p>
+                    </div>
+                </div>
+                <!-- Project card 2 -->
+                <div class="project-card" tabindex="0">
+                    <h3>Project 2: <span class="project-sub">Data Visualization</span></h3>
+                    <img src="assets/img/placeholder.png" alt="Chart placeholder" class="project-image">
+                    <p>Interactive visualization exploring dataset trends. Hover the image to see a tooltip.</p>
+                </div>
+                <!-- Project card 3 -->
+                <div class="project-card" tabindex="0">
+                    <h3>Project 3: <span class="project-sub">Modal Demo</span></h3>
+                    <img src="assets/img/placeholder.png" alt="Modal demo placeholder" class="project-image">
+                    <p>Shows a modal with more information. Click the button below.</p>
+                    <button class="modal-button">Open Modal</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About tab content -->
+        <section id="about-section" class="tab-content" aria-labelledby="about-tab">
+            <div class="section-inner">
+                <h2>About Me</h2>
+                <div class="content">
+                    <div class="image-block">
+                        <img src="assets/img/placeholder.png" alt="Profile headshot placeholder">
+                    </div>
+                    <div class="text-block">
+                        <p><strong>Professional Summary:</strong> Replace this section with a short paragraph summarizing who you are (e.g., Computer Science student / aspiring software engineer focused on front-end development and user‑centric design).</p>
+                        <h3>Experience</h3>
+                        <ul class="compact">
+                            <li><strong>[Role Title]</strong> – [Organization], [Dates] – Brief bullet of impact or responsibility.</li>
+                            <li><strong>[Role Title]</strong> – [Organization], [Dates] – Another concise accomplishment.</li>
+                        </ul>
+                        <h3>Skills</h3>
+                        <ul class="tags" aria-label="Skill list">
+                            <li>HTML5</li>
+                            <li>CSS3 / Flexbox</li>
+                            <li>JavaScript (ES6)</li>
+                            <li>jQuery</li>
+                            <li>Responsive Design</li>
+                            <li>Git / GitHub</li>
+                        </ul>
+                        <p class="note">Customize the above with your actual roles, achievements, and stack.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies tab content -->
+        <section id="hobbies-section" class="tab-content" aria-labelledby="hobbies-tab">
+            <div class="section-inner">
+                <h2>Interests & Hobbies</h2>
+                <div class="content column">
+                    <div class="image-block">
+                        <img src="assets/img/placeholder.png" alt="Representative hobby image placeholder">
+                    </div>
+                    <div class="text-block">
+                        <p>Describe what you enjoy outside of professional or academic work. Suggested structure:</p>
+                        <ul class="compact">
+                            <li><strong>Hobby / Activity 1:</strong> One sentence explaining why it matters to you.</li>
+                            <li><strong>Hobby / Activity 2:</strong> A highlight or achievement (event, club, team, etc.).</li>
+                            <li><strong>Community / Volunteering:</strong> Optional description of involvement.</li>
+                        </ul>
+                        <p>Add a second image, gallery, or list if desired for variety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal overlay for project details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Project Details</h2>
+            <p>This modal shows additional information about a project. This demonstrates a modal effect using jQuery.</p>
+        </div>
+    </div>
+
+    <!-- External JavaScript file -->
+    <script src="js/app.js"></script>
+</body>
+</html>
