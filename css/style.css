@@ -225,6 +225,13 @@ body.dark .theme-toggle { border-color:#555; }
 .reveal { opacity:0; transform:translateY(25px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 
+/* Footer */
+.site-footer { margin-top:40px; padding:var(--gap); background:var(--card); border-top:1px solid var(--border); font-size:.75rem; line-height:1.4; text-align:center; }
+.site-footer a { color:var(--accent); text-decoration:none; }
+.site-footer a:hover, .site-footer a:focus { text-decoration:underline; }
+.footer-links { margin:var(--space-sm) 0 0; }
+.jump-top { font-weight:600; }
+
 /* Responsive layout for mobile view */
 @media (max-width: 768px) {
     .page { max-width:var(--container-mobile); padding:0 var(--space-sm) 30px; }
