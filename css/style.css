@@ -108,6 +108,8 @@ main { max-width:900px; width:100%; margin:0 auto; padding:0 20px 40px; }
 }
 
 .image-block img { width:100%; height:auto; border:1px solid var(--border); border-radius:4px; }
+.avatar-img { width:180px; max-width:100%; height:auto; display:block; }
+@media (max-width:768px){ .avatar-img { width:140px; } }
 
 .text-block {
     flex-grow: 1;
