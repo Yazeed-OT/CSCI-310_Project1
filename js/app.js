@@ -140,4 +140,15 @@ $(document).ready(function() {
             $('#contact-form')[0].reset();
         }, 700);
     });
+
+    // Smooth scroll Back to Top
+    $('.jump-top').on('click', function(e){
+        // Allow anchor default focus change but override abrupt jump
+        e.preventDefault();
+        window.scrollTo({top:0, behavior:'smooth'});
+        // Also ensure first focusable element near top gets focus for accessibility
+        setTimeout(function(){
+            $('#top h1').attr('tabindex','-1').focus();
+        }, 400);
+    });
 });
