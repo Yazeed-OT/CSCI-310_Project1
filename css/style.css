@@ -106,7 +106,7 @@ nav li.active {
 .layout-grid { display:grid; grid-template-columns:260px 1fr; grid-template-rows:auto auto auto; grid-template-areas:
     "image right"
     "subtext right"
-    "content content"; gap:20px; }
+    "content content"; gap:var(--gap); }
 .grid-image { grid-area:image; }
 .grid-right { grid-area:right; }
 .grid-subtext { grid-area:subtext; font-size:.8rem; line-height:1.3; }
