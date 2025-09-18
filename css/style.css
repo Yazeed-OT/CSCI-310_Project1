@@ -116,7 +116,7 @@ nav li.active {
 .image-block { flex:0 0 auto; }
 
 .image-block img { width:100%; height:auto; border:1px solid var(--border); border-radius:4px; }
-.avatar-img { width:180px; max-width:100%; height:auto; display:block; }
+.avatar-img { width:100%; max-width:100%; height:auto; display:block; }
 @media (max-width:768px){ .avatar-img { width:140px; } }
 
 .text-block {
