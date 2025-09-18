@@ -207,4 +207,37 @@ $(document).ready(function() {
         }
         setTimeout(typeNext, 400); // slight delay for nicer feel
     })();
+
+    // Lightbox for diagram images
+    const $lightbox = $('#lightbox');
+    const $lightboxImg = $lightbox.find('.lightbox-img');
+    const $lightboxClose = $lightbox.find('.lightbox-close');
+
+    function openLightbox(src, alt) {
+        $lightboxImg.attr('src', src);
+        if (alt) $lightboxImg.attr('alt', alt);
+        $lightbox.fadeIn(150).attr('aria-hidden', 'false');
+        $('body').addClass('no-scroll');
+        $lightboxClose.focus();
+    }
+    function closeLightbox() {
+        $lightbox.fadeOut(150).attr('aria-hidden', 'true');
+        $('body').removeClass('no-scroll');
+    }
+
+    // Click any image inside diagram gallery to open
+    $('.diagram-gallery img').on('click', function() {
+        const src = $(this).attr('src');
+        const alt = $(this).attr('alt') || 'Expanded diagram';
+        openLightbox(src, alt);
+    });
+
+    // Close actions
+    $lightbox.on('click', function(e){
+        if (e.target === this) closeLightbox();
+    });
+    $lightboxClose.on('click', closeLightbox);
+    $(document).on('keydown', function(e){
+        if (e.key === 'Escape' && $lightbox.is(':visible')) closeLightbox();
+    });
 });
