@@ -38,11 +38,11 @@ body {
 
 /* Header styling */
 /* Page structural container */
-.page { width:100%; max-width:var(--container-desktop); margin:0 auto; padding:0 var(--gap) 40px; }
+.page { width:100%; max-width:var(--container-desktop); margin:0 auto; padding:0 0 40px; }
 
 header.site-header {
     position:relative; height:var(--header-desktop); background:var(--card);
-    border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; padding:0 var(--gap);
+    border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; padding:0;
 }
 
 header h1 {
@@ -52,7 +52,7 @@ header h1 {
 }
 
 /* Navigation menu styling */
-nav.site-menu { margin-top:var(--gap); background:var(--bg); padding:0 var(--gap); }
+nav.site-menu { margin-top:var(--gap); background:var(--bg); padding:0; }
 
 nav ul {
     list-style: none;
