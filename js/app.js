@@ -208,36 +208,26 @@ $(document).ready(function() {
         setTimeout(typeNext, 400); // slight delay for nicer feel
     })();
 
-    // Lightbox for diagram images
-    const $lightbox = $('#lightbox');
-    const $lightboxImg = $lightbox.find('.lightbox-img');
-    const $lightboxClose = $lightbox.find('.lightbox-close');
-
-    function openLightbox(src, alt) {
-        $lightboxImg.attr('src', src);
-        if (alt) $lightboxImg.attr('alt', alt);
-        $lightbox.fadeIn(150).attr('aria-hidden', 'false');
-        $('body').addClass('no-scroll');
-        $lightboxClose.focus();
-    }
-    function closeLightbox() {
-        $lightbox.fadeOut(150).attr('aria-hidden', 'true');
-        $('body').removeClass('no-scroll');
-    }
-
-    // Click any image inside diagram gallery to open
-    $('.diagram-gallery img').on('click', function() {
-        const src = $(this).attr('src');
-        const alt = $(this).attr('alt') || 'Expanded diagram';
-        openLightbox(src, alt);
-    });
-
-    // Close actions
-    $lightbox.on('click', function(e){
-        if (e.target === this) closeLightbox();
-    });
-    $lightboxClose.on('click', closeLightbox);
-    $(document).on('keydown', function(e){
-        if (e.key === 'Escape' && $lightbox.is(':visible')) closeLightbox();
-    });
+    // Pop-out diagrams on hover; click to lock/unlock
+    (function(){
+        var locked = null;
+        $('.diagram-gallery img').on('mouseenter focus', function(){
+            if(locked && locked[0] !== this) return; // only hovered or locked
+            $(this).addClass('popped');
+        }).on('mouseleave blur', function(){
+            if(locked && locked[0] === this) return; // keep if locked
+            $(this).removeClass('popped');
+        }).on('click', function(e){
+            e.preventDefault();
+            var $img = $(this);
+            if(locked && locked[0] === this){
+                $img.removeClass('popped');
+                locked = null;
+                return;
+            }
+            if(locked){ locked.removeClass('popped'); locked = null; }
+            $img.addClass('popped');
+            locked = $img;
+        });
+    })();
 });

@@ -185,8 +185,11 @@ body.dark ul.tags li { background:#22303d; border-color:#35506b; }
 
 /* Diagram gallery inside project details */
 .diagram-gallery { display:flex; flex-wrap:wrap; gap:15px; margin:10px 0; }
-.diagram-gallery figure { flex:1 1 260px; margin:0; background:var(--card); border:1px solid var(--border); padding:8px; border-radius:4px; }
-.diagram-gallery img { width:100%; height:auto; display:block; cursor:zoom-in; }
+.diagram-gallery figure { flex:1 1 260px; margin:0; background:var(--card); border:1px solid var(--border); padding:8px; border-radius:4px; overflow:visible; }
+.diagram-gallery img { width:100%; height:auto; display:block; cursor:zoom-in; position:relative; transform-origin:center; transition: transform .25s ease, box-shadow .25s ease; will-change: transform; }
+.diagram-gallery img:hover,
+.diagram-gallery img:focus-visible,
+.diagram-gallery img.popped { transform: scale(1.85); z-index:5; box-shadow:0 15px 40px rgba(0,0,0,0.35); }
 .diagram-gallery figcaption { font-size:.65rem; text-transform:uppercase; letter-spacing:.5px; margin-top:4px; color:var(--muted); text-align:center; }
 
 
@@ -240,14 +243,6 @@ body.dark .skill .pct { color:#ccc; }
 .site-footer a:hover, .site-footer a:focus { text-decoration:underline; }
 .footer-links { margin:var(--space-sm) 0 0; }
 .jump-top { font-weight:600; }
-
-/* Lightbox overlay */
-.no-scroll { overflow:hidden; }
-.lightbox-backdrop { position:fixed; inset:0; background:rgba(0,0,0,0.85); display:none; align-items:center; justify-content:center; z-index:3000; }
-.lightbox-content { position:relative; max-width:95vw; max-height:90vh; }
-.lightbox-img { max-width:95vw; max-height:90vh; display:block; border-radius:6px; box-shadow:0 10px 30px rgba(0,0,0,0.5); }
-.lightbox-close { position:absolute; top:-10px; right:-10px; width:36px; height:36px; border-radius:50%; border:none; background:#ffffff; color:#000; font-size:20px; font-weight:700; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.4); }
-body.dark .lightbox-close { background:#e3e6e8; color:#000; }
 
 /* Responsive layout for mobile view */
 @media (max-width: 768px) {
